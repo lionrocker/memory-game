@@ -1,0 +1,116 @@
+/*
+#020202
+#181818
+#F6E71D
+#F5D10D
+*/
+
+.timer {
+    margin: 10px;
+    margin-right:-20px;
+    font-family: roboto;
+    color: #F6E71D;
+    font-weight: 100;
+    font-size: 25px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.turns {
+    margin: 10px;
+    margin-right:-20px;
+    font-family: roboto;
+    color: #F6E71D;
+    font-weight: 100;
+    font-size: 25px;
+
+    position: fixed;
+    top: 30px;
+    left: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#card-container {
+    width: 1000px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #181818;
+    border: 1px solid #F5D10D;
+    backface-visibility: hidden;
+}
+
+.card {
+    width: calc(15% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+} 
+
+.card-front{
+    transform: rotateY(180deg);
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+  
+
+
+
+.logo {
+    transform: scale(0.3) translate(-490px, -100px);
+
+    user-select: none;
+}
+
+.symbol {
+    font-family: "roboto";
+    font-weight: 100;
+    font-size: 50px;
+    color: #F6E71D;
+
+    user-select: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+
+
+}
+
